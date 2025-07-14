@@ -13,15 +13,14 @@ import { authUser, selectUser, selectUserStatus } from "./features/user/userSlic
 import { getDefaultRoute } from "./components/accouting/getDefaultRoute";
 
 //export const apiUrl = 'http://localhost:8080';
-export const apiUrl = "https://brass-serv.shk.solutions";
-//export const apiUrl = process.env.REACT_APP_API_URL;
+export const apiUrl = import.meta.env.VITE_API_URL;
 
  export const App = () => {
   const user = useAppSelector(selectUser);
   const status = useAppSelector(selectUserStatus);
   const dispatch = useAppDispatch();
 
-  // Проверка авторизации при загрузке приложения
+
   useEffect(() => {
     dispatch(authUser());
   }, [dispatch]);

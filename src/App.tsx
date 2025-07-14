@@ -1,7 +1,7 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { ProtectedRoute } from "./components/accouting/ProtectedRoute";
 import Cabinet from "./components/Cabinet";
 import MainSuperAdmin from "./components/super/MainSuperAdmin";
